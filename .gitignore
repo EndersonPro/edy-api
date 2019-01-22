@@ -14,7 +14,5 @@ __pycache__
 *.egg-info
 *.temp
 /build
-edyvue
-edyapp
 Prueba-Api
-api-edy
+edyenv
