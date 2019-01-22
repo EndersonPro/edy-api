@@ -14,5 +14,5 @@ __pycache__
 *.egg-info
 *.temp
 /build
-Prueba-Api
-edyenv
+Prueba-Api/
+edyenv/

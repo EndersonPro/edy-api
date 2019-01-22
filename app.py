@@ -4,7 +4,7 @@ import pafy
 import json
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*":{"origins":"https://edy-pro.herokuapp.com/*"}})
 
 @app.route("/api/<string:id>/blob", methods=['GET'])
 def apiedyblob(id):
@@ -58,4 +58,4 @@ def apiedy(url):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
