@@ -6,10 +6,26 @@ import json
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/api/<string:id>/blob", methods=['GET'])
+def apiedyblob(id):
+    video = pafy.new(id)
+    data = {
+        'title': video.title,
+        'video': []
+    }
+    for v in video.streams:
+        if(v.extension == 'mp4'):
+            data['video'].append(
+                {   'resolution': str(v.resolution),
+                    'url': str(v.url)
+                })
+    return jsonify(data)
+
 
 @app.route("/api/<string:url>", methods=['GET'])
 def apiedy(url):
     video = pafy.new(url)
+    print(video)
     data = {'data':
             {
                 'titulo': video.title,
@@ -42,4 +58,4 @@ def apiedy(url):
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

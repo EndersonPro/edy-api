@@ -6,4 +6,4 @@ Jinja2==2.10
 MarkupSafe==1.0
 six==1.11.0
 Werkzeug==0.14.1
-youtube-dl==2018.11.7
+youtube-dl==2019.1.17
