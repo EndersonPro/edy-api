@@ -4,6 +4,7 @@ Flask-Cors==3.0.6
 itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
+pafy==0.5.4
 six==1.11.0
 Werkzeug==0.14.1
-youtube-dl==2019.1.17
+youtube-dl==2019.8.2
